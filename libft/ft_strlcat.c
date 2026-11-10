@@ -6,7 +6,7 @@
 /*   By: rzbib <rzbib@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 17:50:54 by rzbib             #+#    #+#             */
-/*   Updated: 2026/11/10 18:35:32 by rzbib            ###   ########.fr       */
+/*   Updated: 2026/11/10 18:46:21 by rzbib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,15 +41,15 @@ size_t	ft_strlcat(char *dest, char *src, unsigned int size)
 	return (sum);
 }
 
-#include <stdio.h>
+// #include <stdio.h>
 
-// size_t strlcat(char *dst, const char *src, size_t siz);
-int	main(void)
-{
-	char src[] = "Hello";
-	char dest[] = "Hi";
-	printf("%d\n", strlcat(dest, src, 2));
-	// printf("%lu\n", ft_strlcat(dest, src, 2));
-	printf("%s\n", dest);
-	return (0);
-}
+// // size_t strlcat(char *dst, const char *src, size_t siz);
+// int	main(void)
+// {
+// 	char src[] = "Hello";
+// 	char dest[] = "Hi";
+// 	printf("%d\n", strlcat(dest, src, 2));
+// 	// printf("%lu\n", ft_strlcat(dest, src, 2));
+// 	printf("%s\n", dest);
+// 	return (0);
+// }
