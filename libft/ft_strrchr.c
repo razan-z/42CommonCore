@@ -6,33 +6,25 @@
 /*   By: rzbib <rzbib@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/10 19:31:49 by rzbib             #+#    #+#             */
-/*   Updated: 2026/11/10 20:20:03 by rzbib            ###   ########.fr       */
+/*   Updated: 2026/11/13 12:46:28 by rzbib            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
-
-static size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
 
-	i = ft_strlen(s) - 1 ;
-	if (i < 0)
-		return (NULL);
-	while (s[i] != c && s[i] != '\0')
+	i = ft_strlen(s);
+	while (1)
+	{
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		if (i == 0)
+			break ;
 		i--;
-	if (s[i] == c)
-		return ((char *)&s[i]);
+	}
 	return (NULL);
 }
 
